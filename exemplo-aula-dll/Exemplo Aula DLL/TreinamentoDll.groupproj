@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E2AEDE42-D84B-4305-8784-DA628668AEDB}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Calculo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TesteDll.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Anotacao.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Calculo">
+        <MSBuild Projects="Calculo.dproj"/>
+    </Target>
+    <Target Name="Calculo:Clean">
+        <MSBuild Projects="Calculo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Calculo:Make">
+        <MSBuild Projects="Calculo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TesteDll">
+        <MSBuild Projects="TesteDll.dproj"/>
+    </Target>
+    <Target Name="TesteDll:Clean">
+        <MSBuild Projects="TesteDll.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TesteDll:Make">
+        <MSBuild Projects="TesteDll.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Anotacao">
+        <MSBuild Projects="Anotacao.dproj"/>
+    </Target>
+    <Target Name="Anotacao:Clean">
+        <MSBuild Projects="Anotacao.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Anotacao:Make">
+        <MSBuild Projects="Anotacao.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Calculo;TesteDll;Anotacao"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Calculo:Clean;TesteDll:Clean;Anotacao:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Calculo:Make;TesteDll:Make;Anotacao:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

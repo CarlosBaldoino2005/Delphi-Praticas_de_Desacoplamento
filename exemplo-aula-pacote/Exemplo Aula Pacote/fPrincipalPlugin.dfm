@@ -1,0 +1,49 @@
+object frmPrincipalPlugin: TfrmPrincipalPlugin
+  Left = 0
+  Top = 0
+  Caption = 'frmPrincipalPlugin'
+  ClientHeight = 299
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 635
+    Height = 49
+    Align = alTop
+    TabOrder = 0
+    object btnCadCategoria: TButton
+      AlignWithMargins = True
+      Left = 4
+      Top = 4
+      Width = 93
+      Height = 41
+      Align = alLeft
+      Caption = 'CadCategoria'
+      TabOrder = 0
+      OnClick = btnCadCategoriaClick
+    end
+    object btnCadMarca: TButton
+      AlignWithMargins = True
+      Left = 103
+      Top = 4
+      Width = 75
+      Height = 41
+      Align = alLeft
+      Caption = 'CadMarca'
+      TabOrder = 1
+      OnClick = btnCadMarcaClick
+      ExplicitLeft = 144
+      ExplicitTop = 16
+      ExplicitHeight = 25
+    end
+  end
+end

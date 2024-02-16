@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AC9500B2-1C14-46F0-A366-5FC5539C4980}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Cervejaria.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="pkgAbout.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="pkgCadMarca.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="pkgCadCategoria.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="pkgConexao.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CervejariaPlugin.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Cervejaria">
+        <MSBuild Projects="Cervejaria.dproj"/>
+    </Target>
+    <Target Name="Cervejaria:Clean">
+        <MSBuild Projects="Cervejaria.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Cervejaria:Make">
+        <MSBuild Projects="Cervejaria.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="pkgAbout">
+        <MSBuild Projects="pkgAbout.dproj"/>
+    </Target>
+    <Target Name="pkgAbout:Clean">
+        <MSBuild Projects="pkgAbout.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pkgAbout:Make">
+        <MSBuild Projects="pkgAbout.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="pkgCadMarca">
+        <MSBuild Projects="pkgCadMarca.dproj"/>
+    </Target>
+    <Target Name="pkgCadMarca:Clean">
+        <MSBuild Projects="pkgCadMarca.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pkgCadMarca:Make">
+        <MSBuild Projects="pkgCadMarca.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="pkgCadCategoria">
+        <MSBuild Projects="pkgCadCategoria.dproj"/>
+    </Target>
+    <Target Name="pkgCadCategoria:Clean">
+        <MSBuild Projects="pkgCadCategoria.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pkgCadCategoria:Make">
+        <MSBuild Projects="pkgCadCategoria.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="pkgConexao">
+        <MSBuild Projects="pkgConexao.dproj"/>
+    </Target>
+    <Target Name="pkgConexao:Clean">
+        <MSBuild Projects="pkgConexao.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pkgConexao:Make">
+        <MSBuild Projects="pkgConexao.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CervejariaPlugin">
+        <MSBuild Projects="CervejariaPlugin.dproj"/>
+    </Target>
+    <Target Name="CervejariaPlugin:Clean">
+        <MSBuild Projects="CervejariaPlugin.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CervejariaPlugin:Make">
+        <MSBuild Projects="CervejariaPlugin.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Cervejaria;pkgAbout;pkgCadMarca;pkgCadCategoria;pkgConexao;CervejariaPlugin"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Cervejaria:Clean;pkgAbout:Clean;pkgCadMarca:Clean;pkgCadCategoria:Clean;pkgConexao:Clean;CervejariaPlugin:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Cervejaria:Make;pkgAbout:Make;pkgCadMarca:Make;pkgCadCategoria:Make;pkgConexao:Make;CervejariaPlugin:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,67 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'frmPrincipal'
+  ClientHeight = 464
+  ClientWidth = 672
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 672
+    Height = 41
+    Align = alTop
+    TabOrder = 0
+    ExplicitLeft = 184
+    ExplicitTop = 128
+    ExplicitWidth = 185
+    object btnAbout: TButton
+      AlignWithMargins = True
+      Left = 593
+      Top = 4
+      Width = 75
+      Height = 33
+      Align = alRight
+      Caption = 'About'
+      TabOrder = 0
+      OnClick = btnAboutClick
+      ExplicitLeft = 536
+      ExplicitTop = 9
+      ExplicitHeight = 25
+    end
+    object btnCadMarca: TButton
+      AlignWithMargins = True
+      Left = 4
+      Top = 4
+      Width = 75
+      Height = 33
+      Align = alLeft
+      Caption = 'CadMarca'
+      TabOrder = 1
+      OnClick = btnCadMarcaClick
+      ExplicitLeft = 32
+      ExplicitTop = 8
+      ExplicitHeight = 25
+    end
+    object btnCadCategoria: TButton
+      AlignWithMargins = True
+      Left = 85
+      Top = 4
+      Width = 84
+      Height = 33
+      Align = alLeft
+      Caption = 'CadCategoria'
+      TabOrder = 2
+      OnClick = btnCadCategoriaClick
+    end
+  end
+end
